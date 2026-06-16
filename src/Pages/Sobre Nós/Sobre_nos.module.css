@@ -26,9 +26,7 @@
   max-width: 700px;
   margin: auto;
   font-size: 1.2rem;
-}
 
-/* Seções */
 .sobre-section,
 .impacto,
 .cta {
@@ -50,7 +48,7 @@
   line-height: 1.8;
 }
 
-/* Cards */
+
 .missao-valores {
   display: flex;
   justify-content: center;
