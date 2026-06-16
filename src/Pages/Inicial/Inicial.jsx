@@ -1,4 +1,4 @@
-import styles from "./Inicial.module.css";
+import styles from "./Inicial.module.jsx";
 
 function Inicial() {
   return (
