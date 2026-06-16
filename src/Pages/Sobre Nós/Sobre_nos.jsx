@@ -8,7 +8,7 @@ function SobreNos() {
         <div className="hero-content">
           <h1>Sobre Nós</h1>
           <p>
-            Inspiramos, conectamos e fortalecemos mulheres empreendedoras para
+            Inspiramos, conectamos e fortalecemos mulheres para terem seu 
             transformar ideias em negócios de sucesso.
           </p>
         </div>
