@@ -17,13 +17,10 @@ function SobreNos() {
       <section className="sobre-section">
         <h2>Nossa História</h2>
         <p>
-          Nosso projeto nasceu com o propósito de criar um espaço onde mulheres
-          possam desenvolver seus negócios, compartilhar experiências e acessar
-          oportunidades de crescimento profissional.
-        </p>
-        <p>
-          Acreditamos que o empreendedorismo feminino é uma ferramenta poderosa
-          para gerar independência financeira, inovação e impacto social.
+          Somos uma plataforma dedicada ao incentivo do empreendedorismo feminino,
+           oferecendo capacitação profissional, apoio psicológico e oportunidades de
+            desenvolvimento. Nosso objetivo é fortalecer mulheres, promovendo autonomia,
+             confiança e crescimento por meio do conhecimento, da colaboração e do empoderamento.
         </p>
       </section>
 
@@ -31,8 +28,7 @@ function SobreNos() {
         <div className="card">
           <h3>Missão</h3>
           <p>
-            Apoiar mulheres empreendedoras por meio de conteúdo, networking e
-            capacitação.
+            Apoiar mulheres a conseguirem sua idependencia financeira
           </p>
         </div>
 
@@ -53,36 +49,6 @@ function SobreNos() {
         </div>
       </section>
 
-      <section className="impacto">
-        <h2>Nosso Impacto</h2>
-
-        <div className="stats">
-          <div className="stat">
-            <h3>+5.000</h3>
-            <p>Mulheres impactadas</p>
-          </div>
-
-          <div className="stat">
-            <h3>+300</h3>
-            <p>Negócios apoiados</p>
-          </div>
-
-          <div className="stat">
-            <h3>+100</h3>
-            <p>Eventos realizados</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="cta">
-        <h2>Faça Parte Dessa Transformação</h2>
-        <p>
-          Junte-se à nossa comunidade e descubra novas oportunidades para
-          crescer e empreender.
-        </p>
-
-        <button>Quero Participar</button>
-      </section>
     </div>
   );
 }
