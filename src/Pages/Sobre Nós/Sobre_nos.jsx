@@ -1,52 +1,78 @@
-import Sobre_nos from "./Sobre_nos.module.css";
-import React from "react"
+import React from "react";
+import styles from "./Sobre_nos.module.css";
 
 function SobreNos() {
   return (
-    <div className="sobre-container">
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Sobre Nós</h1>
-          <p>
-            Inspiramos, conectamos e fortalecemos mulheres para terem seu 
-            transformar ideias em negócios de sucesso.
-          </p>
-        </div>
-      </section>
+    <div className={styles.container}>
 
-      <section className="sobre-section">
-        <h2>Nossa História</h2>
+      {/* HERO */}
+      <section className={styles.hero}>
+        <h1>Empreender é transformar vidas</h1>
         <p>
-          Somos uma plataforma dedicada ao incentivo do empreendedorismo feminino,
-           oferecendo capacitação profissional, apoio psicológico e oportunidades de
-            desenvolvimento. Nosso objetivo é fortalecer mulheres, promovendo autonomia,
-             confiança e crescimento por meio do conhecimento, da colaboração e do empoderamento.
+          Uma plataforma dedicada ao fortalecimento do empreendedorismo feminino,
+          oferecendo capacitação profissional, apoio psicológico e oportunidades
+          de crescimento.
         </p>
       </section>
 
-      <section className="missao-valores">
-        <div className="card">
-          <h3>Missão</h3>
-          <p>
-            Apoiar mulheres a conseguirem sua idependencia financeira
-          </p>
-        </div>
+      {/* SOBRE */}
+      <section className={styles.section}>
+        <h2>Quem Somos</h2>
+        <p>
+          Somos uma iniciativa que apoia mulheres a desenvolverem sua autonomia
+          financeira e emocional por meio da educação, do empreendedorismo e da
+          conexão com oportunidades reais de mercado.
+        </p>
+      </section>
 
-        <div className="card">
-          <h3>Visão</h3>
-          <p>
-            Ser referência na promoção do empreendedorismo feminino e da
-            liderança feminina.
-          </p>
-        </div>
+      {/* VALORES */}
+      <section className={styles.cardsSection}>
+        <h2>Nossos Pilares</h2>
 
-        <div className="card">
-          <h3>Valores</h3>
-          <p>
-            Inclusão, colaboração, inovação, empoderamento e desenvolvimento
-            sustentável.
-          </p>
+        <div className={styles.cards}>
+          <div className={styles.card}>
+            <h3>Capacitação</h3>
+            <p>
+              Cursos profissionalizantes e treinamentos para desenvolvimento de habilidades
+              técnicas e comportamentais.
+            </p>
+          </div>
+
+          <div className={styles.card}>
+            <h3>Empreendedorismo</h3>
+            <p>
+              Incentivo à criação e crescimento de negócios liderados por mulheres.
+            </p>
+          </div>
+
+          <div className={styles.card}>
+            <h3>Apoio Psicológico</h3>
+            <p>
+              Suporte emocional para fortalecer confiança, autoestima e bem-estar.
+            </p>
+          </div>
         </div>
+      </section>
+
+      {/* OBJETIVOS */}
+      <section className={styles.section}>
+        <h2>Nossos Objetivos</h2>
+        <ul className={styles.list}>
+          <li>Promover autonomia financeira feminina</li>
+          <li>Oferecer cursos profissionalizantes acessíveis</li>
+          <li>Incentivar liderança e inovação</li>
+          <li>Fortalecer redes de apoio entre mulheres</li>
+          <li>Reduzir barreiras no mercado de trabalho</li>
+        </ul>
+      </section>
+
+      {/* CTA */}
+      <section className={styles.cta}>
+        <h2>Faça parte dessa transformação</h2>
+        <p>
+          Aprenda, cresça e construa seu futuro com apoio e conhecimento.
+        </p>
+        <button>Quero me inscrever</button>
       </section>
 
     </div>
