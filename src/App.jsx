@@ -5,12 +5,11 @@ import Inicial from './Pages/Inicial/Inicial.jsx'
 import Navbar from './Components/Navbar/Navbar.jsx'
 
 function App() {
-
   return (
-    <>
-    <Inicial />
-   <Navbar />
-    </>
+  <>
+  <Navbar />
+  <Inicial />
+</>
   )
 }
 
