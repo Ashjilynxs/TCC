@@ -3,6 +3,7 @@ import{
     Routes,
     Route
 } from "react-router-dom"
+import Sobre_nos from "../Sobre Nós/Sobre_nos"
 import Inicial from "../Inicial/Inicial"
 const AppRoutes = () =>{
 return(
@@ -15,7 +16,7 @@ element={<Inicial/>}
 
 <Route
 path="/Sobre"
-element={<Sobre_nos/>}
+element={<SobreNos/>}
 />
 
 </Routes>
@@ -23,3 +24,4 @@ element={<Sobre_nos/>}
 </BrowserRouter>
 )
 }
+export default AppRoutes

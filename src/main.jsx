@@ -3,9 +3,9 @@ import { createRoot } from 'react-dom/client'
 
  import './index.css'
 
-import App from './App'
-import AppRoutes from './Routes/AppRoutes.jsx'
-// import './index.css'
+
+import App from "./App"
+import AppRoutes from "./Pages/Routes/AppRoutes"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
