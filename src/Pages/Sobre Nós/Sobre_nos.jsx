@@ -5,7 +5,7 @@ function SobreNos() {
   return (
     <div className={styles.container}>
 
-      {/* HERO */}
+
       <section className={styles.hero}>
         <h1>Empreender é transformar vidas</h1>
         <p>
@@ -15,7 +15,7 @@ function SobreNos() {
         </p>
       </section>
 
-      {/* SOBRE */}
+ 
       <section className={styles.section}>
         <h2>Quem Somos</h2>
         <p>
@@ -25,7 +25,7 @@ function SobreNos() {
         </p>
       </section>
 
-      {/* VALORES */}
+
       <section className={styles.cardsSection}>
         <h2>Nossos Pilares</h2>
 
@@ -54,7 +54,7 @@ function SobreNos() {
         </div>
       </section>
 
-      {/* OBJETIVOS */}
+
       <section className={styles.section}>
         <h2>Nossos Objetivos</h2>
         <ul className={styles.list}>
@@ -66,7 +66,7 @@ function SobreNos() {
         </ul>
       </section>
 
-      {/* CTA */}
+
       <section className={styles.cta}>
         <h2>Faça parte dessa transformação</h2>
         <p>
