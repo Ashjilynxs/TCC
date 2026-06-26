@@ -1,15 +1,12 @@
-import { useState } from 'react'
-import './App.css'
-
-import Inicial from './Pages/Inicial/Inicial.jsx'
-import Navbar from './Components/Navbar/Navbar.jsx'
+import Navbar from './Components/Navbar/Navbar'
+import AppRoutes from './Pages/Routes/AppRoutes'
 
 function App() {
   return (
-  <>
-  <Navbar />
-  <Inicial />
-</>
+    <>
+      <Navbar />
+      <AppRoutes />
+    </>
   )
 }
 
