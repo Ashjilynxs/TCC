@@ -1,5 +1,5 @@
-import Navbar from './Components/Navbar/Navbar'
-import Footer from './Components/Footer/Footer.jsx'
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 import AppRoutes from './Pages/Routes/AppRoutes'
 
 function App() {
