@@ -15,7 +15,6 @@ function SobreNos() {
         </p>
       </section>
 
- 
       <section className={styles.section}>
         <h2>Quem Somos</h2>
         <p>
@@ -66,7 +65,6 @@ function SobreNos() {
         </ul>
       </section>
 
-
       <section className={styles.cta}>
         <h2>Faça parte dessa transformação</h2>
         <p>
@@ -74,6 +72,7 @@ function SobreNos() {
         </p>
         <button>Quero me inscrever</button>
       </section>
+
 
     </div>
   );
