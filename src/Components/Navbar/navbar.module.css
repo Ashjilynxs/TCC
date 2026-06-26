@@ -8,9 +8,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1f2937;
+  background-color: #e2e2e2;
   padding: 15px 40px;
-  color: rgb(255, 0, 0);
+  color: rgb(235, 194, 194);
 }
 
 .logo {
