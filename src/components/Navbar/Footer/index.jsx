@@ -1,1 +1,3 @@
-export { default } from "./Footer";
+export default function Footer() {
+  return <div>Footer funcionando</div>
+}
