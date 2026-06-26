@@ -1,3 +1,5 @@
+import style from './navbar.module.css';
+import { Link } from 'react-router-dom'; // Importante para os Links funcionarem!
 
 function Navbar() {
   return (
@@ -5,9 +7,8 @@ function Navbar() {
       <div className={style.logo}>Instituto Recomeçar</div>
 
       <ul className={style.navLinks}>
-        <li><Link to="/Inicial">Início </Link></li>
-        <li><Link to="/Sobre">Sobre nós </Link></li>
-      
+        <li><Link to="/Inicial">Início</Link></li>
+        <li><Link to="/Sobre">Sobre nós</Link></li>
       </ul>
 
       <button className={style.btnLogin}>Entrar</button>
