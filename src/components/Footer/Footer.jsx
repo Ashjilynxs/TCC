@@ -15,12 +15,6 @@ function Footer() {
             <a href="/Inicial">Início</a>
             <a href="/Sobre">Sobre nós</a>
           </div>
-          <div className={style.column}>
-            <h3>Recursos</h3>
-            <a href="#marketplace">Marketplace</a>
-            <a href="#cursos">Cursos</a>
-            <a href="#apoio">Apoio Psicológico</a>
-          </div>
         </div>
       </div>
       

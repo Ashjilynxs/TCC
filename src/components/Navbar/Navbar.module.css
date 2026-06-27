@@ -8,14 +8,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e2e2e2;
+  background-color: #F8E8EE;
   padding: 15px 40px;
   color: rgb(235, 194, 194);
+    border-bottom: 1px solid #9B72CF;
+      position: fixed;
+        top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #9B72CF;
 }
 
 .navLinks {
@@ -26,16 +33,16 @@
 
 .navLinks a {
   text-decoration: none;
-  color: white;
+  color: #9B72CF;
   transition: color 0.3s;
 }
 
 .navLinks a:hover {
-  color: #60a5fa;
+  color: #875DBF;
 }
 
 .btnLogin {
-  background-color: #3b82f6;
+  background-color: #9B72CF;
   color: white;
   border: none;
   padding: 10px 18px;
@@ -45,5 +52,5 @@
 }
 
 .btnLogin:hover {
-  background-color: #2563eb;
+  background-color: #875DBF;
 }

@@ -1,5 +1,5 @@
 import Navbar from './components/Navbar/Navbar'
-import Footer from './components/Navbar/Footer'
+import Footer from './components/Footer/Footer'
 import AppRoutes from './Pages/Routes/AppRoutes'
 
 function App() {

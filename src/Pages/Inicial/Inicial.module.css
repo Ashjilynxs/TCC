@@ -9,17 +9,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 .hero h1 {
   margin-bottom: 16px;
   max-width: 700px;
   line-height: 1.2;
+  color: #9B72CF;
 }
 
 .hero p {
   max-width: 600px;
   margin: 0 auto;
-  color: var(--text);
+  color: #875DBF;
 }
 
 .botao {
@@ -41,6 +43,10 @@
 
 .destaques {
   margin-top: 60px;
+
+}
+.destaques h2{
+  color: #875DBF;
 }
 
 .cards {
@@ -50,6 +56,7 @@
   flex-wrap: wrap;
   margin-top: 24px;
 }
+
 
 .card {
   width: 280px;
@@ -62,12 +69,15 @@
 }
 
 .card h3 {
-  color: var(--text-h);
+  color: #875DBF;
   margin-bottom: 10px;
 }
 
 .card p {
-  color: var(--text);
+  color: #9B72CF;
+}
+.card:hover{
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
