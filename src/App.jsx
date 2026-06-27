@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar/Navbar";
-import AppRoutes from "./Pages/Routes/AppRoutes";
-import Footer from "./components/Footer/Footer"
+import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Navbar/Footer'
+import AppRoutes from './Pages/Routes/AppRoutes'
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <AppRoutes />
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
