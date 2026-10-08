@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import styles from "./Inicial.module.css";
 
 function Inicial() {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.container}>
       <section className={styles.hero}>
@@ -11,7 +14,10 @@ function Inicial() {
           oportunidades de venda, capacitação profissional e apoio psicológico.
         </p>
 
-        <button className={styles.botao}>
+        <button
+          className={styles.botao}
+          onClick={() => navigate("/Cadastro")}
+        >
           Criar Conta
         </button>
       </section>
