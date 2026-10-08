@@ -4,6 +4,24 @@ import styles from "./cadastro.module.css";
 function Cadastro() {
   const [etapa, setEtapa] = useState(1);
   const [aceitouTermos, setAceitouTermos] = useState(false);
+  const [foto, setFoto] = useState(null);
+  const [categorias, setCategorias] = useState([]);
+
+  const escolherFoto = (e) => {
+    const arquivo = e.target.files[0];
+
+    if (arquivo) {
+      setFoto(URL.createObjectURL(arquivo));
+    }
+  };
+
+  const selecionarCategoria = (categoria) => {
+    if (categorias.includes(categoria)) {
+      setCategorias(categorias.filter((item) => item !== categoria));
+    } else {
+      setCategorias([...categorias, categoria]);
+    }
+  };
 
   return (
     <main className={styles.container}>
@@ -19,17 +37,23 @@ function Cadastro() {
         <div className={styles.etapas}>
 
           <div className={styles.etapa}>
-            <div className={styles.icone}>✦</div>
+            <div className={styles.icone}>
+              {etapa > 1 ? "✓" : "✦"}
+            </div>
             <span>Sobre Você</span>
           </div>
 
           <div className={styles.etapa}>
-            <div className={styles.icone}>▧</div>
+            <div className={styles.icone}>
+              {etapa > 2 ? "✓" : "▧"}
+            </div>
             <span>Termos & Acordo</span>
           </div>
 
           <div className={styles.etapa}>
-            <div className={styles.icone}>⌂</div>
+            <div className={styles.icone}>
+              {etapa > 3 ? "✓" : "⌂"}
+            </div>
             <span>Sua Loja</span>
           </div>
 
@@ -43,6 +67,7 @@ function Cadastro() {
 
       {etapa === 1 && (
         <section className={styles.conteudo}>
+
           <h2>Sobre Você</h2>
 
           <div className={styles.formulario}>
@@ -85,11 +110,13 @@ function Cadastro() {
             </button>
 
           </div>
+
         </section>
       )}
 
       {etapa === 2 && (
         <section className={styles.conteudo}>
+
           <h2>Acordo de Vendedora</h2>
 
           <div className={styles.aviso}>
@@ -99,7 +126,6 @@ function Cadastro() {
           <div className={styles.acordo}>
 
             <h3>Acordo de Vendedora</h3>
-
             <p>Versão 2.1 - Janeiro de 2024</p>
 
             <p>
@@ -197,16 +223,173 @@ function Cadastro() {
 
           <h2>Sua Loja</h2>
 
-          <p>
-            Aqui serão cadastradas as informações da sua loja.
-          </p>
+          <div className={styles.lojaFormulario}>
 
-          <button
-            className={styles.botaoVoltar}
-            onClick={() => setEtapa(2)}
-          >
-            Voltar
-          </button>
+            <label className={styles.tituloCampo}>
+              📷 Foto de Perfil da Loja
+            </label>
+
+            <label className={styles.fotoUpload}>
+
+              {foto ? (
+                <img
+                  src={foto}
+                  alt="Foto da loja"
+                  className={styles.fotoPreview}
+                />
+              ) : (
+                <>
+                  <div className={styles.iconeFoto}>
+                    📷
+                  </div>
+
+                  <span>Adicionar foto</span>
+
+                  <small>JPG, PNG até 5MB</small>
+                </>
+              )}
+
+              <input
+                type="file"
+                accept="image/png, image/jpeg"
+                onChange={escolherFoto}
+                hidden
+              />
+
+            </label>
+
+            <div className={styles.campoLoja}>
+
+              <label>🏪 Nome da Loja</label>
+
+              <input
+                type="text"
+                placeholder="Ex: Ateliê da Ana"
+              />
+
+            </div>
+
+            <div className={styles.campoLoja}>
+
+              <label>Descrição da Loja</label>
+
+              <textarea
+                placeholder="Apresente sua loja para os compradores. O que você vende? Qual sua inspiração?"
+              ></textarea>
+
+            </div>
+
+            <div className={styles.campoLoja}>
+
+              <label>🏷️ Categorias Principais</label>
+
+              <div className={styles.categorias}>
+
+                <button
+                  type="button"
+                  className={
+                    categorias.includes("Artesanato")
+                      ? styles.categoriaSelecionada
+                      : ""
+                  }
+                  onClick={() => selecionarCategoria("Artesanato")}
+                >
+                  + Artesanato
+                </button>
+
+                <button
+                  type="button"
+                  className={
+                    categorias.includes("Moda")
+                      ? styles.categoriaSelecionada
+                      : ""
+                  }
+                  onClick={() => selecionarCategoria("Moda")}
+                >
+                  + Moda
+                </button>
+
+                <button
+                  type="button"
+                  className={
+                    categorias.includes("Beleza")
+                      ? styles.categoriaSelecionada
+                      : ""
+                  }
+                  onClick={() => selecionarCategoria("Beleza")}
+                >
+                  + Beleza
+                </button>
+
+                <button
+                  type="button"
+                  className={
+                    categorias.includes("Decoração")
+                      ? styles.categoriaSelecionada
+                      : ""
+                  }
+                  onClick={() => selecionarCategoria("Decoração")}
+                >
+                  + Decoração
+                </button>
+
+                <button
+                  type="button"
+                  className={
+                    categorias.includes("Alimentos")
+                      ? styles.categoriaSelecionada
+                      : ""
+                  }
+                  onClick={() => selecionarCategoria("Alimentos")}
+                >
+                  + Alimentos
+                </button>
+
+              </div>
+
+            </div>
+
+            <div className={styles.campoLoja}>
+
+              <label>Chave PIX para Recebimento</label>
+
+              <div className={styles.pix}>
+
+                <select>
+                  <option>CPF</option>
+                  <option>E-mail</option>
+                  <option>Telefone</option>
+                  <option>Chave aleatória</option>
+                </select>
+
+                <input
+                  type="text"
+                  placeholder="Sua chave PIX"
+                />
+
+              </div>
+
+            </div>
+
+            <div className={styles.botoes}>
+
+              <button
+                className={styles.botaoVoltar}
+                onClick={() => setEtapa(2)}
+              >
+                Voltar
+              </button>
+
+              <button
+                className={styles.botaoContinuar}
+                onClick={() => setEtapa(4)}
+              >
+                Criar Minha Loja →
+              </button>
+
+            </div>
+
+          </div>
 
         </section>
       )}
@@ -214,11 +397,55 @@ function Cadastro() {
       {etapa === 4 && (
         <section className={styles.conteudo}>
 
-          <h2>Pronto!</h2>
+          <div className={styles.pronto}>
 
-          <p>
-            Seu cadastro foi concluído com sucesso.
-          </p>
+            <div className={styles.iconePronto}>
+              ✨
+            </div>
+
+            <h2>Sua loja está no ar!</h2>
+
+            <p>
+              Parabéns! Sua conta de empreendedora foi criada com
+              sucesso. Agora você pode adicionar seus primeiros
+              produtos ao marketplace.
+            </p>
+
+            <div className={styles.recursosLoja}>
+
+              <div className={styles.recurso}>
+                <span>📊</span>
+                <p>Acompanhe suas vendas</p>
+              </div>
+
+              <div className={styles.recurso}>
+                <span>🏪</span>
+                <p>Gerencie produtos</p>
+              </div>
+
+              <div className={styles.recurso}>
+                <span>🛡️</span>
+                <p>Suporte sempre disponível</p>
+              </div>
+
+            </div>
+
+            <div className={styles.botoesPronto}>
+
+              <button className={styles.botaoContinuar}>
+                Ir ao Marketplace
+              </button>
+
+              <button
+                className={styles.botaoVoltar}
+                onClick={() => setEtapa(3)}
+              >
+                Voltar ao Painel
+              </button>
+
+            </div>
+
+          </div>
 
         </section>
       )}

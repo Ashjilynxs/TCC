@@ -20,8 +20,6 @@
   color: #875dbf;
 }
 
-/* BARRA DE ETAPAS */
-
 .progresso {
   max-width: 700px;
   margin: 40px auto 0;
@@ -65,8 +63,6 @@
   color: white;
 }
 
-/* CONTEÚDO */
-
 .conteudo {
   max-width: 700px;
   margin: 40px auto 0;
@@ -81,8 +77,6 @@
   color: #49306b;
   text-align: center;
 }
-
-/* FORMULÁRIO */
 
 .formulario {
   display: grid;
@@ -129,8 +123,6 @@
   resize: vertical;
 }
 
-/* AVISO */
-
 .aviso {
   margin-bottom: 15px;
   padding: 12px;
@@ -139,8 +131,6 @@
   color: #69468a;
   font-size: 13px;
 }
-
-/* ACORDO */
 
 .acordo {
   height: 350px;
@@ -168,8 +158,6 @@
   margin-bottom: 15px;
 }
 
-/* ACEITE */
-
 .aceite {
   display: flex;
   align-items: flex-start;
@@ -190,12 +178,11 @@
   cursor: pointer;
 }
 
-/* BOTÕES */
-
 .botoes {
   display: flex;
   justify-content: space-between;
   margin-top: 25px;
+  gap: 12px;
 }
 
 .botaoContinuar,
@@ -233,7 +220,195 @@
   transform: translateY(-2px);
 }
 
-/* RESPONSIVIDADE */
+.lojaFormulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tituloCampo {
+  color: #49306b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.fotoUpload {
+  min-height: 160px;
+  border: 2px dashed #c58bdd;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #69468a;
+  background-color: #fffafd;
+}
+
+.fotoUpload:hover {
+  background-color: #faf1fb;
+}
+
+.iconeFoto {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #edc3d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.fotoUpload span {
+  font-size: 15px;
+}
+
+.fotoUpload small {
+  color: #875dbf;
+}
+
+.fotoPreview {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #c58bdd;
+}
+
+.campoLoja {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.campoLoja label {
+  color: #49306b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.campoLoja input,
+.campoLoja textarea,
+.campoLoja select {
+  padding: 12px;
+  border: 1px solid #e9bfd0;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  background-color: #fffafd;
+}
+
+.campoLoja textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.campoLoja input:focus,
+.campoLoja textarea:focus,
+.campoLoja select:focus {
+  border-color: #b47cdb;
+}
+
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.categorias button {
+  padding: 7px 13px;
+  border: 1px solid #dfc9e4;
+  border-radius: 20px;
+  background-color: #f7edf8;
+  color: #9b72cf;
+  cursor: pointer;
+}
+
+.categorias button:hover {
+  background-color: #ead8f0;
+}
+
+.categoriaSelecionada {
+  background-color: #dcb9ed !important;
+  border-color: #9b72cf !important;
+  color: #49306b !important;
+}
+
+.pix {
+  display: flex;
+  gap: 12px;
+}
+
+.pix select {
+  width: 190px;
+}
+
+.pix input {
+  flex: 1;
+}
+
+.pronto {
+  text-align: center;
+}
+
+.iconePronto {
+  width: 80px;
+  height: 80px;
+  margin: 20px auto 25px;
+  border-radius: 50%;
+  background-color: #a875d3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  color: white;
+}
+
+.pronto h2 {
+  margin-bottom: 12px;
+}
+
+.pronto > p {
+  max-width: 500px;
+  margin: 0 auto 30px;
+  color: #875dbf;
+  line-height: 1.6;
+}
+
+.recursosLoja {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.recurso {
+  padding: 20px 10px;
+  border: 1px solid #e9bfd0;
+  border-radius: 14px;
+  background-color: #fdf0f5;
+}
+
+.recurso span {
+  font-size: 25px;
+}
+
+.recurso p {
+  margin: 10px 0 0;
+  color: #49306b;
+  font-size: 13px;
+}
+
+.botoesPronto {
+  display: flex;
+  gap: 12px;
+}
+
+.botoesPronto button {
+  flex: 1;
+}
 
 @media (max-width: 768px) {
   .container {
@@ -266,5 +441,21 @@
 
   .botoes {
     gap: 15px;
+  }
+
+  .recursosLoja {
+    grid-template-columns: 1fr;
+  }
+
+  .pix {
+    flex-direction: column;
+  }
+
+  .pix select {
+    width: 100%;
+  }
+
+  .botoesPronto {
+    flex-direction: column;
   }
 }
