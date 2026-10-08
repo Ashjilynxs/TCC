@@ -260,7 +260,7 @@ function Cadastro() {
 
             <div className={styles.campoLoja}>
 
-              <label>🏪 Nome da Loja</label>
+              <label> Nome da Loja</label>
 
               <input
                 type="text"
@@ -281,7 +281,7 @@ function Cadastro() {
 
             <div className={styles.campoLoja}>
 
-              <label>🏷️ Categorias Principais</label>
+              <label> Categorias Principais</label>
 
               <div className={styles.categorias}>
 
@@ -414,17 +414,17 @@ function Cadastro() {
             <div className={styles.recursosLoja}>
 
               <div className={styles.recurso}>
-                <span>📊</span>
+                <span></span>
                 <p>Acompanhe suas vendas</p>
               </div>
 
               <div className={styles.recurso}>
-                <span>🏪</span>
+                <span></span>
                 <p>Gerencie produtos</p>
               </div>
 
               <div className={styles.recurso}>
-                <span>🛡️</span>
+                <span></span>
                 <p>Suporte sempre disponível</p>
               </div>
 
