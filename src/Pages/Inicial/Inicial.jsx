@@ -1,3 +1,4 @@
+
 import { useNavigate } from "react-router-dom";
 import styles from "./Inicial.module.css";
 
@@ -19,6 +20,13 @@ function Inicial() {
           onClick={() => navigate("/Cadastro")}
         >
           Criar Conta
+        </button>
+
+        <button
+          className={styles.botao}
+          onClick={() => navigate("/Dashboard")}
+        >
+          Acessar Dashboard
         </button>
       </section>
 
@@ -57,9 +65,7 @@ function Inicial() {
         <div className={styles.cards}>
           <div className={styles.card}>
             <h3>Capacitação</h3>
-            <p>
-              Desenvolva habilidades para fortalecer seu negócio.
-            </p>
+            <p>Desenvolva habilidades para fortalecer seu negócio.</p>
           </div>
 
           <div className={styles.card}>
