@@ -1,0 +1,102 @@
+.container {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-color: #f4eaf1;
+}
+
+.cabecalho {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.cabecalho h1 {
+  color: #49306b;
+  margin-bottom: 8px;
+}
+
+.cabecalho p {
+  color: #875dbf;
+}
+
+.produtos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #e8c4d0;
+}
+
+.produtos h2 {
+  color: #49306b;
+  margin-bottom: 5px;
+}
+
+.produtos > p {
+  color: #875dbf;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  padding-bottom: 16px;
+}
+
+.imagem {
+  height: 175px;
+  background-color: #ead8e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #875dbf;
+}
+
+.card h3 {
+  margin: 15px 16px 5px;
+  color: #49306b;
+}
+
+.card p {
+  margin: 0 16px 12px;
+  color: #875dbf;
+  font-size: 14px;
+}
+
+.card strong {
+  display: block;
+  margin: 0 16px 15px;
+  color: #9b72cf;
+}
+
+.card button {
+  width: calc(100% - 32px);
+  margin: 0 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #c18bdc;
+  color: white;
+  cursor: pointer;
+}
+
+.card button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
