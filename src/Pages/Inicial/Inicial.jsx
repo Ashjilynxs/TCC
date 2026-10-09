@@ -21,13 +21,6 @@ function Inicial() {
         >
           Criar Conta
         </button>
-
-        <button
-          className={styles.botao}
-          onClick={() => navigate("/Dashboard")}
-        >
-          Acessar Dashboard
-        </button>
       </section>
 
       <section className={styles.destaques}>
@@ -65,7 +58,9 @@ function Inicial() {
         <div className={styles.cards}>
           <div className={styles.card}>
             <h3>Capacitação</h3>
-            <p>Desenvolva habilidades para fortalecer seu negócio.</p>
+            <p>
+              Desenvolva habilidades para fortalecer seu negócio.
+            </p>
           </div>
 
           <div className={styles.card}>
@@ -81,6 +76,61 @@ function Inicial() {
             <p>
               Divulgue seus produtos e alcance novos clientes.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.destaques}>
+        <h2>Produtos em Destaque</h2>
+
+        <p>
+          Conheça alguns produtos artesanais criados pelas empreendedoras
+          da nossa comunidade.
+        </p>
+
+        <div className={styles.cards}>
+          <div className={styles.card}>
+            <img
+              src="/produtos/sabonetes.jpg"
+              alt="Sabonetes naturais artesanais"
+              className={styles.imagemProduto}
+            />
+            <h3>Sabonetes Naturais</h3>
+            <p>Juliana Costa</p>
+            <strong>R$ 29,50</strong>
+          </div>
+
+          <div className={styles.card}>
+            <img
+              src="/produtos/bordado.jpg"
+              alt="Bordado floral artesanal"
+              className={styles.imagemProduto}
+            />
+            <h3>Bordado Floral</h3>
+            <p>Fernanda Lima</p>
+            <strong>R$ 145,00</strong>
+          </div>
+
+          <div className={styles.card}>
+            <img
+              src="/produtos/velas.jpg"
+              alt="Velas aromáticas artesanais"
+              className={styles.imagemProduto}
+            />
+            <h3>Velas Aromáticas</h3>
+            <p>Patricia Rocha</p>
+            <strong>R$ 55,00</strong>
+          </div>
+
+          <div className={styles.card}>
+            <img
+              src="/produtos/croche.jpg"
+              alt="Peça decorativa de crochê"
+              className={styles.imagemProduto}
+            />
+            <h3>Crochê Decorativo</h3>
+            <p>Amanda Souza</p>
+            <strong>R$ 72,00</strong>
           </div>
         </div>
       </section>
