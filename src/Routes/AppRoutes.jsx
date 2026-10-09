@@ -1,10 +1,10 @@
 
 import { Routes, Route } from "react-router-dom";
 
-import Inicial from "../Inicial/Inicial";
-import SobreNos from "../Sobre Nós/Sobre_nos";
-import Cadastro from "../Cadastro/cadastro";
-import Dashboard from "../Dashboard/Dashboard";
+import Inicial from "../Pages/Inicial/Inicial";
+import SobreNos from "../Pages/Sobre Nós/Sobre_nos";
+import Cadastro from "../Pages/Cadastro/cadastro";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 
 function AppRoutes() {
   return (
