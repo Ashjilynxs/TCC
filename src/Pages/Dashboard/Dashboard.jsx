@@ -173,22 +173,7 @@ function Dashboard() {
                   </article>
                 ))}
 
-                <div className={styles.curso}>
-                  <h3>Curso em andamento</h3>
-                  <p>Empreendedorismo Digital — 40%</p>
 
-                  <div className={styles.barraProgresso}>
-                    <div />
-                  </div>
-
-                  <button
-                    onClick={() =>
-                      alert("Área de cursos demonstrativa.")
-                    }
-                  >
-                    Continuar curso
-                  </button>
-                </div>
               </section>
             </div>
 
