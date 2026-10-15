@@ -1,8 +1,11 @@
+
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Dashboard.module.css";
 
 function Dashboard() {
   const [secao, setSecao] = useState("Perfil");
+  const navigate = useNavigate();
 
   const produtos = [
     {
@@ -40,7 +43,7 @@ function Dashboard() {
       nome: "Bordado Floral",
       codigo: "#BR-4521",
       preco: "R$ 145,00",
-      status: "Enviado",
+      status: "Em preparação",
     },
     {
       nome: "Velas Aromáticas",
@@ -61,27 +64,31 @@ function Dashboard() {
   return (
     <div className={styles.painel}>
       <aside className={styles.menu}>
-        <h2>Instituto<br />Recomeçar</h2>
+        <h2>
+          Instituto
+          <br />
+          Recomeçar
+        </h2>
 
         <button
           className={secao === "Perfil" ? styles.ativo : ""}
           onClick={() => setSecao("Perfil")}
         >
-          ♙ Perfil
+          Perfil
         </button>
 
         <button
           className={secao === "Meus Pedidos" ? styles.ativo : ""}
           onClick={() => setSecao("Meus Pedidos")}
         >
-          ▢ Meus Pedidos
+          Meus Pedidos
         </button>
 
         <button
           className={secao === "Meus Produtos" ? styles.ativo : ""}
           onClick={() => setSecao("Meus Produtos")}
         >
-          ♧ Meus Produtos
+          Meus Produtos
         </button>
       </aside>
 
@@ -90,102 +97,132 @@ function Dashboard() {
           <>
             <div className={styles.atividade}>
               <strong>Notificações e atividades</strong>
-              <p>Nova atividade · Uma cliente visitou sua loja!</p>
+              <p>Uma cliente visitou sua loja recentemente.</p>
             </div>
 
             <header className={styles.cabecalho}>
               <div>
-                <p>Bem-vinda de volta!</p>
+                <p className={styles.subtitulo}>Bem-vinda de volta!</p>
                 <h1>Ana Paula</h1>
                 <span>Confira as novidades da sua loja.</span>
               </div>
 
               <button
                 className={styles.botao}
-                onClick={() => setSecao("Meus Produtos")}
+                onClick={() => navigate("/Cadastro")}
               >
-                ✦ Comece a Empreender
+                Comece a Empreender
               </button>
             </header>
 
-            <div className={styles.resumo}>
-              <section className={styles.bloco}>
-                <div className={styles.tituloBloco}>
+            <div className={styles.perfil}>
+              <div className={styles.avatar}>A</div>
+              <div>
+                <h2>Ana Paula</h2>
+                <p>Empreendedora</p>
+                <p>Bem-vinda à sua área da loja.</p>
+              </div>
+            </div>
+
+            <div className={styles.resumoLoja}>
+              <section className={styles.painelProdutos}>
+                <div className={styles.tituloSecao}>
                   <h2>Meus Produtos Cadastrados</h2>
                   <button onClick={() => setSecao("Meus Produtos")}>
-                    Ver todos →
+                    Ver todos
                   </button>
                 </div>
 
                 {produtos.slice(0, 2).map((produto) => (
-                  <article className={styles.produtoLinha} key={produto.nome}>
+                  <article
+                    className={styles.produtoLinha}
+                    key={produto.nome}
+                  >
                     <img src={produto.imagem} alt={produto.nome} />
+
                     <div>
                       <h3>{produto.nome}</h3>
-                      <p>Estoque demonstrativo</p>
+                      <p>{produto.categoria}</p>
                     </div>
+
                     <strong>{produto.preco}</strong>
                   </article>
                 ))}
               </section>
 
-              <section className={styles.bloco}>
-                <div className={styles.tituloBloco}>
+              <section className={styles.painelPedidos}>
+                <div className={styles.tituloSecao}>
                   <h2>Pedidos Recentes</h2>
                   <button onClick={() => setSecao("Meus Pedidos")}>
-                    Ver todos →
+                    Ver todos
                   </button>
                 </div>
 
                 {pedidos.map((pedido) => (
-                  <article className={styles.pedidoLinha} key={pedido.codigo}>
+                  <article
+                    className={styles.pedidoMini}
+                    key={pedido.codigo}
+                  >
                     <div>
                       <h3>{pedido.nome}</h3>
                       <p>{pedido.codigo}</p>
                       <span>{pedido.status}</span>
                     </div>
+
                     <strong>{pedido.preco}</strong>
                   </article>
                 ))}
 
                 <div className={styles.curso}>
-                  <strong>Curso em andamento</strong>
+                  <h3>Curso em andamento</h3>
                   <p>Empreendedorismo Digital — 40%</p>
-                  <div className={styles.progresso}>
+
+                  <div className={styles.barraProgresso}>
                     <div />
                   </div>
-                  <button className={styles.botaoCurso}>
+
+                  <button
+                    onClick={() =>
+                      alert("Área de cursos demonstrativa.")
+                    }
+                  >
                     Continuar curso
                   </button>
                 </div>
               </section>
             </div>
 
-            <section className={styles.bloco}>
-              <div className={styles.tituloBloco}>
-                <h2>♡ Catálogo da Plataforma</h2>
-                <button onClick={() => setSecao("Meus Produtos")}>
-                  Ver tudo →
-                </button>
+            <section className={styles.catalogo}>
+              <div className={styles.tituloSecao}>
+                <h2>Catálogo da Plataforma</h2>
+                <span>Produtos artesanais</span>
               </div>
 
-              <div className={styles.catalogo}>
+              <div className={styles.catalogoCards}>
                 {produtos.map((produto) => (
-                  <article className={styles.cardCatalogo} key={produto.nome}>
+                  <article
+                    className={styles.cardCatalogo}
+                    key={produto.nome}
+                  >
                     <img src={produto.imagem} alt={produto.nome} />
+
                     <div className={styles.infoCatalogo}>
                       <span className={styles.categoria}>
                         {produto.categoria}
                       </span>
+
                       <h3>{produto.nome}</h3>
                       <p>{produto.vendedora}</p>
                       <strong>{produto.preco}</strong>
+
                       <button
                         onClick={() =>
-                          alert(`Você selecionou: ${produto.nome}`)
+                          alert(
+                            `Compra demonstrativa: ${produto.nome}`
+                          )
                         }
                       >
-                        ♡ Comprar
+                        Comprar
                       </button>
                     </div>
                   </article>
@@ -194,18 +231,23 @@ function Dashboard() {
             </section>
 
             <section className={styles.bloco}>
-              <h2>🏆 Ranking das Vendedoras do Mês</h2>
+              <h2>Ranking das Vendedoras do Mês</h2>
 
               <div className={styles.ranking}>
                 {vendedoras.map((vendedora, indice) => (
-                  <article className={styles.vendedora} key={vendedora.nome}>
+                  <article
+                    className={styles.vendedora}
+                    key={vendedora.nome}
+                  >
                     <strong>{indice + 1}º</strong>
+
                     <div>
                       <h3>{vendedora.nome}</h3>
                       <p>
                         {vendedora.vendas} vendas · {vendedora.valor}
                       </p>
                     </div>
+
                     {vendedora.nome === "Ana Paula" && (
                       <span className={styles.voce}>Você</span>
                     )}
@@ -219,14 +261,20 @@ function Dashboard() {
         {secao === "Meus Pedidos" && (
           <section className={styles.bloco}>
             <h1>Meus Pedidos</h1>
-            <p>Acompanhe os pedidos demonstrativos da sua loja.</p>
+            <p>Acompanhe os pedidos da sua loja.</p>
 
             {pedidos.map((pedido) => (
-              <article className={styles.pedidoLinha} key={pedido.codigo}>
+              <article
+                className={styles.pedido}
+                key={pedido.codigo}
+              >
                 <div>
                   <h3>{pedido.nome}</h3>
-                  <p>{pedido.codigo} · {pedido.status}</p>
+                  <p>
+                    {pedido.codigo} — {pedido.status}
+                  </p>
                 </div>
+
                 <strong>{pedido.preco}</strong>
               </article>
             ))}
@@ -235,13 +283,28 @@ function Dashboard() {
 
         {secao === "Meus Produtos" && (
           <section className={styles.bloco}>
-            <h1>Meus Produtos</h1>
-            <p>Confira os produtos cadastrados na demonstração.</p>
+            <div className={styles.tituloSecao}>
+              <div>
+                <h1>Meus Produtos</h1>
+                <p>Confira os produtos da demonstração.</p>
+              </div>
 
-            <div className={styles.catalogo}>
+              <button
+                className={styles.botao}
+                onClick={() => navigate("/Cadastro")}
+              >
+                Adicionar produto
+              </button>
+            </div>
+
+            <div className={styles.catalogoCards}>
               {produtos.map((produto) => (
-                <article className={styles.cardCatalogo} key={produto.nome}>
+                <article
+                  className={styles.cardCatalogo}
+                  key={produto.nome}
+                >
                   <img src={produto.imagem} alt={produto.nome} />
+
                   <div className={styles.infoCatalogo}>
                     <h3>{produto.nome}</h3>
                     <p>{produto.categoria}</p>
