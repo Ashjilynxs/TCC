@@ -98,6 +98,12 @@ function Inicial() {
             <h3>Sabonetes Naturais</h3>
             <p>Juliana Costa</p>
             <strong>R$ 29,50</strong>
+            <button
+  className={styles.botao}
+  onClick={() => navigate("/Dashboard")}
+>
+  Comprar
+</button>
           </div>
 
           <div className={styles.card}>
@@ -109,7 +115,13 @@ function Inicial() {
             <h3>Bordado Floral</h3>
             <p>Fernanda Lima</p>
             <strong>R$ 145,00</strong>
-          </div>
+          <button
+    className={styles.botao}
+    onClick={() => navigate("/Dashboard")}
+  >
+    Comprar
+  </button>
+</div>
 
           <div className={styles.card}>
             <img
@@ -120,7 +132,13 @@ function Inicial() {
             <h3>Velas Aromáticas</h3>
             <p>Patricia Rocha</p>
             <strong>R$ 55,00</strong>
-          </div>
+         <button
+     className={styles.botao}
+     onClick={() => navigate("/Dashboard")}
+      >
+      Comprar
+     </button>
+  </div>
 
           <div className={styles.card}>
             <img
@@ -131,6 +149,13 @@ function Inicial() {
             <h3>Crochê Decorativo</h3>
             <p>Amanda Souza</p>
             <strong>R$ 72,00</strong>
+
+            <button
+  className={styles.botao}
+  onClick={() => navigate("/Dashboard")}
+>
+  Comprar
+</button>
           </div>
         </div>
       </section>
