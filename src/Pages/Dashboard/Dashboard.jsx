@@ -10,7 +10,7 @@ function Dashboard() {
       nome: "Bordado Floral",
       categoria: "Artesanato",
       preco: "R$ 145,00",
-      imagem: "/produtos/bordado.png",
+      imagem: "/produtos/bordado.jpg",
     },
     {
       nome: "Velas Aromáticas",
