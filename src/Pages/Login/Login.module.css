@@ -1,0 +1,162 @@
+
+.pagina {
+  min-height: 75vh;
+  padding: 50px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4eaf1;
+}
+
+.card {
+  width: 100%;
+  max-width: 440px;
+  padding: 35px;
+  background-color: white;
+  border: 1px solid #e8c4d0;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(73, 48, 107, 0.08);
+}
+
+.marca {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: #c69cdb;
+  color: white;
+  font-weight: bold;
+}
+
+.marca h1 {
+  margin: 0;
+  font-size: 25px;
+  color: #875dbf;
+}
+
+.marca p {
+  margin-top: 8px;
+  color: #9b72cf;
+  font-size: 14px;
+}
+
+.opcoes {
+  display: flex;
+  gap: 8px;
+  padding: 5px;
+  margin-bottom: 28px;
+  border-radius: 10px;
+  background-color: #f4eaf1;
+}
+
+.opcoes button {
+  flex: 1;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #875dbf;
+  cursor: pointer;
+}
+
+.opcoes button.selecionado {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(73, 48, 107, 0.1);
+  color: #49306b;
+}
+
+.card h2 {
+  margin-bottom: 8px;
+  color: #49306b;
+  font-size: 23px;
+}
+
+.descricao {
+  margin-bottom: 24px;
+  color: #875dbf;
+  font-size: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 18px;
+}
+
+.campo label {
+  color: #49306b;
+  font-size: 14px;
+}
+
+.campo input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #e4cfe9;
+  border-radius: 8px;
+  outline: none;
+  background-color: #fff;
+  color: #49306b;
+  font: inherit;
+}
+
+.campo input:focus {
+  border-color: #9b72cf;
+}
+
+.botaoPrincipal {
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 8px;
+  background-color: #9b72cf;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.botaoPrincipal:hover {
+  background-color: #875dbf;
+}
+
+.mensagem {
+  margin-top: 16px;
+  color: #875dbf;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.voltar {
+  display: block;
+  margin: 22px auto 0;
+  border: none;
+  background: transparent;
+  color: #875dbf;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .pagina {
+    padding: 30px 15px;
+  }
+
+  .card {
+    padding: 25px 20px;
+  }
+}

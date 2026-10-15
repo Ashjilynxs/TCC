@@ -5,6 +5,7 @@ import Inicial from "../Pages/Inicial/Inicial";
 import SobreNos from "../Pages/Sobre Nós/Sobre_nos";
 import Cadastro from "../Pages/Cadastro/cadastro";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import Login from "../Pages/Login/Login";
 
 function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ function AppRoutes() {
       <Route path="/Sobre" element={<SobreNos />} />
       <Route path="/Cadastro" element={<Cadastro />} />
       <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Login" element={<Login />} />
     </Routes>
   );
 }
